@@ -19,7 +19,7 @@ from .injectors import (
 )
 
 
-ManagedCredentialType(
+ssh = ManagedCredentialType(
     namespace='ssh',
     kind='ssh',
     name=gettext_noop('Machine'),

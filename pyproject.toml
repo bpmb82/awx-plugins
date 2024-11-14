@@ -75,6 +75,9 @@ thycotic_dsv = "awx_plugins.credentials.dsv:dsv_plugin"
 thycotic_tss = "awx_plugins.credentials.tss:tss_plugin"
 aws_secretsmanager_credential = "awx_plugins.credentials.aws_secretsmanager:aws_secretmanager_plugin"
 
+[project.entry-points."awx_plugins.managed_credentials"] # new entry points group name
+ssh = "awx_plugins.credentials.plugins:ssh"
+
 [project.entry-points."awx_plugins.inventory"]  # new entry points group name
 azure-rm = "awx_plugins.inventory.plugins:azure_rm"
 ec2 = "awx_plugins.inventory.plugins:ec2"
