@@ -8,6 +8,16 @@ from awx_plugins.interfaces._temporary_private_django_api import (  # noqa: WPS4
     gettext_noop,
 )
 
+from awx_plugins.credentials.injectors import (
+    aws,
+    gce,
+    azure_rm,
+    vmware,
+    openstack,
+    kubernetes_bearer_token,
+    terraform,
+)
+
 
 ManagedCredentialType(
     namespace='ssh',
@@ -205,6 +215,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Amazon Web Services'),
     managed=True,
+    post_injectors=aws,
     inputs={
         'fields': [
             {
@@ -243,6 +254,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('OpenStack'),
     managed=True,
+    post_injectors=openstack,
     inputs={
         'fields': [
             {
@@ -316,6 +328,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('VMware vCenter'),
     managed=True,
+    post_injectors=vmware,
     inputs={
         'fields': [
             {
@@ -388,6 +401,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Google Compute Engine'),
     managed=True,
+    post_injectors=gce,
     inputs={
         'fields': [
             {
@@ -435,6 +449,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Microsoft Azure Resource Manager'),
     managed=True,
+    post_injectors=azure_rm,
     inputs={
         'fields': [
             {
@@ -711,6 +726,7 @@ ManagedCredentialType(
     namespace='kubernetes_bearer_token',
     kind='kubernetes',
     name=gettext_noop('OpenShift or Kubernetes API Bearer Token'),
+    injector=kubernetes_bearer_token,
     inputs={
         'fields': [
             {
@@ -851,6 +867,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Terraform backend configuration'),
     managed=True,
+    post_injectors=terraform,
     inputs={
         'fields': [
             {
