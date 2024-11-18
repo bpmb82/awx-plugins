@@ -5,6 +5,9 @@ import os.path
 import stat
 import tempfile
 
+from awx_plugins.interfaces._temporary_private_api import (  # noqa: WPS436
+    ManagedCredentialType,
+)
 from awx_plugins.interfaces._temporary_private_container_api import (  # noqa: WPS436
     get_incontainer_path,
 )
@@ -108,8 +111,6 @@ class PluginFileInjector:
             ),  # so injector knows this is inventory
         }
         if self.base_injector == 'managed':
-            from awx_plugins.interfaces._temporary_private_api import ManagedCredentialType
-
             cred_kind = inventory_update.source.replace('ec2', 'aws')
             cred_type = ManagedCredentialType.registry[cred_kind]
             if cred_type.custom_injectors:

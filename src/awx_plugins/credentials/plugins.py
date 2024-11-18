@@ -10,12 +10,12 @@ from awx_plugins.interfaces._temporary_private_django_api import (  # noqa: WPS4
 
 from awx_plugins.credentials.injectors import (
     aws,
-    gce,
     azure_rm,
-    vmware,
-    openstack,
+    gce,
     kubernetes_bearer_token,
+    openstack,
     terraform,
+    vmware,
 )
 
 
