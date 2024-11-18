@@ -215,7 +215,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Amazon Web Services'),
     managed=True,
-    post_injectors=aws,
+    custom_injectors=aws,
     inputs={
         'fields': [
             {
@@ -254,7 +254,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('OpenStack'),
     managed=True,
-    post_injectors=openstack,
+    custom_injectors=openstack,
     inputs={
         'fields': [
             {
@@ -328,7 +328,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('VMware vCenter'),
     managed=True,
-    post_injectors=vmware,
+    custom_injectors=vmware,
     inputs={
         'fields': [
             {
@@ -401,7 +401,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Google Compute Engine'),
     managed=True,
-    post_injectors=gce,
+    custom_injectors=gce,
     inputs={
         'fields': [
             {
@@ -449,7 +449,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Microsoft Azure Resource Manager'),
     managed=True,
-    post_injectors=azure_rm,
+    custom_injectors=azure_rm,
     inputs={
         'fields': [
             {
@@ -726,7 +726,7 @@ ManagedCredentialType(
     namespace='kubernetes_bearer_token',
     kind='kubernetes',
     name=gettext_noop('OpenShift or Kubernetes API Bearer Token'),
-    injector=kubernetes_bearer_token,
+    custom_injectors=kubernetes_bearer_token,
     inputs={
         'fields': [
             {
@@ -867,7 +867,7 @@ ManagedCredentialType(
     kind='cloud',
     name=gettext_noop('Terraform backend configuration'),
     managed=True,
-    post_injectors=terraform,
+    custom_injectors=terraform,
     inputs={
         'fields': [
             {
