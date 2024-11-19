@@ -360,7 +360,7 @@ vmware = ManagedCredentialType(
     },
 )
 
-satellite = ManagedCredentialType(
+satellite6 = ManagedCredentialType(
     namespace='satellite6',
     kind='cloud',
     name=gettext_noop('Red Hat Satellite 6'),
@@ -444,7 +444,7 @@ gce = ManagedCredentialType(
     },
 )
 
-azure = ManagedCredentialType(
+azure_rm = ManagedCredentialType(
     namespace='azure_rm',
     kind='cloud',
     name=gettext_noop('Microsoft Azure Resource Manager'),
@@ -504,7 +504,7 @@ azure = ManagedCredentialType(
     },
 )
 
-github_pat = ManagedCredentialType(
+github_token = ManagedCredentialType(
     namespace='github_token',
     kind='token',
     name=gettext_noop('GitHub Personal Access Token'),
@@ -528,7 +528,7 @@ github_pat = ManagedCredentialType(
     },
 )
 
-gitlab_pat = ManagedCredentialType(
+gitlab_token = ManagedCredentialType(
     namespace='gitlab_token',
     kind='token',
     name=gettext_noop('GitLab Personal Access Token'),
@@ -550,7 +550,7 @@ gitlab_pat = ManagedCredentialType(
     },
 )
 
-bitbucket = ManagedCredentialType(
+bitbucket_dc_token = ManagedCredentialType(
     namespace='bitbucket_dc_token',
     kind='token',
     name=gettext_noop('Bitbucket Data Center HTTP Access Token'),
@@ -722,7 +722,7 @@ controller = ManagedCredentialType(
     },
 )
 
-kubernetes = ManagedCredentialType(
+kubernetes_bearer_token = ManagedCredentialType(
     namespace='kubernetes_bearer_token',
     kind='kubernetes',
     name=gettext_noop('OpenShift or Kubernetes API Bearer Token'),
@@ -803,7 +803,7 @@ registry = ManagedCredentialType(
 )
 
 
-galaxy = ManagedCredentialType(
+galaxy_api_token = ManagedCredentialType(
     namespace='galaxy_api_token',
     kind='galaxy',
     name=gettext_noop('Ansible Galaxy/Automation Hub API Token'),
@@ -841,7 +841,7 @@ galaxy = ManagedCredentialType(
     },
 )
 
-gpg = ManagedCredentialType(
+gpg_public_key = ManagedCredentialType(
     namespace='gpg_public_key',
     kind='cryptography',
     name=gettext_noop('GPG Public Key'),
