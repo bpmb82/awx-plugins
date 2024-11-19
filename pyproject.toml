@@ -77,6 +77,26 @@ aws_secretsmanager_credential = "awx_plugins.credentials.aws_secretsmanager:aws_
 
 [project.entry-points."awx_plugins.managed_credentials"] # new entry points group name
 ssh = "awx_plugins.credentials.plugins:ssh"
+scm = "awx_plugins.credentials.plugins:scm"
+vault = "awx_plugins.credentials.plugins:vault"
+net = "awx_plugins.credentials.plugins:net"
+aws = "awx_plugins.credentials.plugins:aws"
+openstack = "awx_plugins.credentials.plugins:openstack"
+vmware = "awx_plugins.credentials.plugins:vmware"
+satellite = "awx_plugins.credentials.plugins:satellite"
+gce = "awx_plugins.credentials.plugins:gce"
+azure = "awx_plugins.credentials.plugins:azure"
+github_pat = "awx_plugins.credentials.plugins:github_pat"
+gitlab_pat = "awx_plugins.credentials.plugins:gitlab_pat"
+bitbucket = "awx_plugins.credentials.plugins:bitbucket"
+insights = "awx_plugins.credentials.plugins:insights"
+rhv = "awx_plugins.credentials.plugins:rhv"
+controller = "awx_plugins.credentials.plugins:controller"
+kubernetes = "awx_plugins.credentials.plugins:kubernetes"
+registry = "awx_plugins.credentials.plugins:registry"
+galaxy = "awx_plugins.credentials.plugins:galaxy"
+gpg = "awx_plugins.credentials.plugins:gpg"
+terraform = "awx_plugins.credentials.plugins:terraform"
 
 [project.entry-points."awx_plugins.inventory"]  # new entry points group name
 azure-rm = "awx_plugins.inventory.plugins:azure_rm"
