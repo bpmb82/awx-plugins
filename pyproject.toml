@@ -89,7 +89,7 @@ insights = "awx_plugins.inventory.plugins:insights"
 openshift_virtualization = "awx_plugins.inventory.plugins:openshift_virtualization"
 constructed = "awx_plugins.inventory.plugins:constructed"
 
-[project.entry-points."awx_plugins.inventory.supported"]  # new entry points group name
+[project.entry-points."awx_plugins.inventory.supported"]  # plugins that awx will skip activating automatically
 satellite6 = "awx_plugins.inventory.plugins:satellite6_supported"
 controller = "awx_plugins.inventory.plugins:controller_supported"
 insights = "awx_plugins.inventory.plugins:insights_supported"
