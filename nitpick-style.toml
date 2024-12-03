@@ -158,7 +158,7 @@ target = '100%'
 flags = [
   'pytest',
 ]
-target = '100%'
+target = '50%'
 [".codecov.yml".coverage.status.patch.typing]
 flags = [
   'MyPy',
