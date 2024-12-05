@@ -19,7 +19,7 @@ from .injectors import (
 )
 
 
-ManagedCredentialType(
+ssh = ManagedCredentialType(
     namespace='ssh',
     kind='ssh',
     name=gettext_noop('Machine'),
@@ -85,7 +85,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+scm = ManagedCredentialType(
     namespace='scm',
     kind='scm',
     name=gettext_noop('Source Control'),
@@ -121,7 +121,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+vault = ManagedCredentialType(
     namespace='vault',
     kind='vault',
     name=gettext_noop('Vault'),
@@ -155,7 +155,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+net = ManagedCredentialType(
     namespace='net',
     kind='net',
     name=gettext_noop('Network'),
@@ -210,7 +210,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+aws = ManagedCredentialType(
     namespace='aws',
     kind='cloud',
     name=gettext_noop('Amazon Web Services'),
@@ -249,7 +249,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+openstack = ManagedCredentialType(
     namespace='openstack',
     kind='cloud',
     name=gettext_noop('OpenStack'),
@@ -323,7 +323,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+vmware = ManagedCredentialType(
     namespace='vmware',
     kind='cloud',
     name=gettext_noop('VMware vCenter'),
@@ -360,7 +360,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+satellite6 = ManagedCredentialType(
     namespace='satellite6',
     kind='cloud',
     name=gettext_noop('Red Hat Satellite 6'),
@@ -396,7 +396,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+gce = ManagedCredentialType(
     namespace='gce',
     kind='cloud',
     name=gettext_noop('Google Compute Engine'),
@@ -444,7 +444,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+azure_rm = ManagedCredentialType(
     namespace='azure_rm',
     kind='cloud',
     name=gettext_noop('Microsoft Azure Resource Manager'),
@@ -504,7 +504,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+github_token = ManagedCredentialType(
     namespace='github_token',
     kind='token',
     name=gettext_noop('GitHub Personal Access Token'),
@@ -528,7 +528,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+gitlab_token = ManagedCredentialType(
     namespace='gitlab_token',
     kind='token',
     name=gettext_noop('GitLab Personal Access Token'),
@@ -550,7 +550,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+bitbucket_dc_token = ManagedCredentialType(
     namespace='bitbucket_dc_token',
     kind='token',
     name=gettext_noop('Bitbucket Data Center HTTP Access Token'),
@@ -574,7 +574,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+insights = ManagedCredentialType(
     namespace='insights',
     kind='insights',
     name=gettext_noop('Insights'),
@@ -602,7 +602,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+rhv = ManagedCredentialType(
     namespace='rhv',
     kind='cloud',
     name=gettext_noop('Red Hat Virtualization'),
@@ -655,7 +655,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+controller = ManagedCredentialType(
     namespace='controller',
     kind='cloud',
     name=gettext_noop('Red Hat Ansible Automation Platform'),
@@ -722,7 +722,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+kubernetes_bearer_token = ManagedCredentialType(
     namespace='kubernetes_bearer_token',
     kind='kubernetes',
     name=gettext_noop('OpenShift or Kubernetes API Bearer Token'),
@@ -762,7 +762,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+registry = ManagedCredentialType(
     namespace='registry',
     kind='registry',
     name=gettext_noop('Container Registry'),
@@ -803,7 +803,7 @@ ManagedCredentialType(
 )
 
 
-ManagedCredentialType(
+galaxy_api_token = ManagedCredentialType(
     namespace='galaxy_api_token',
     kind='galaxy',
     name=gettext_noop('Ansible Galaxy/Automation Hub API Token'),
@@ -841,7 +841,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+gpg_public_key = ManagedCredentialType(
     namespace='gpg_public_key',
     kind='cryptography',
     name=gettext_noop('GPG Public Key'),
@@ -862,7 +862,7 @@ ManagedCredentialType(
     },
 )
 
-ManagedCredentialType(
+terraform = ManagedCredentialType(
     namespace='terraform',
     kind='cloud',
     name=gettext_noop('Terraform backend configuration'),
