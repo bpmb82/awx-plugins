@@ -90,6 +90,7 @@ openshift_virtualization = "awx_plugins.inventory.plugins:openshift_virtualizati
 constructed = "awx_plugins.inventory.plugins:constructed"
 
 [project.entry-points."awx_plugins.inventory.supported"]  # plugins that awx will skip activating automatically
+rhv = "awx_plugins.inventory.plugins:rhv_supported"
 satellite6 = "awx_plugins.inventory.plugins:satellite6_supported"
 controller = "awx_plugins.inventory.plugins:controller_supported"
 insights = "awx_plugins.inventory.plugins:insights_supported"

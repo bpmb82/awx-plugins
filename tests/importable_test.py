@@ -139,6 +139,11 @@ inventory_plugins = (
 supported_inventory_plugins = (
     EntryPointParam(
         'awx_plugins.inventory.supported',
+        'rhv',
+        'awx_plugins.inventory.plugins:rhv_supported',
+    ),
+    EntryPointParam(
+        'awx_plugins.inventory.supported',
         'satellite6',
         'awx_plugins.inventory.plugins:satellite6_supported',
     ),
