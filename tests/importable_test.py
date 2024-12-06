@@ -76,7 +76,7 @@ credential_plugins = (
 inventory_plugins = (
     EntryPointParam(
         'awx_plugins.inventory',
-        'azure-rm',
+        'azure_rm',
         'awx_plugins.inventory.plugins:azure_rm',
     ),
     EntryPointParam(
