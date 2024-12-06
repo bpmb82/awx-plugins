@@ -134,9 +134,6 @@ inventory_plugins = (
         'constructed',
         'awx_plugins.inventory.plugins:constructed',
     ),
-)
-
-supported_inventory_plugins = (
     EntryPointParam(
         'awx_plugins.inventory.supported',
         'rhv',
@@ -178,16 +175,10 @@ with_inventory_plugins = pytest.mark.parametrize(
     ids=str,
 )
 
-with_supported_inventory_plugins = pytest.mark.parametrize(
-    'entry_point',
-    supported_inventory_plugins,
-    ids=str,
-)
-
 
 with_all_plugins = pytest.mark.parametrize(
     'entry_point',
-    credential_plugins + inventory_plugins + supported_inventory_plugins,
+    credential_plugins + inventory_plugins,
     ids=str,
 )
 
@@ -219,17 +210,6 @@ def test_entry_points_are_credential_plugin(
 
 @with_inventory_plugins
 def test_entry_points_are_inventory_plugin(
-        entry_point: EntryPointParam,
-) -> None:
-    """Ensure all exposed inventory plugins are of the same class."""  # noqa: D200, DAR101; FIXME
-    entry_points = _discover_entry_points(group=entry_point.group)
-    loaded_plugin_class = entry_points[entry_point.name].load()
-
-    assert issubclass(loaded_plugin_class, PluginFileInjector)
-
-
-@with_supported_inventory_plugins
-def test_entry_points_are_supported_inventory_plugin(
         entry_point: EntryPointParam,
 ) -> None:
     """Ensure all exposed inventory plugins are of the same class."""  # noqa: D200, DAR101; FIXME
