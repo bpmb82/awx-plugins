@@ -181,7 +181,7 @@ with_inventory_plugins = pytest.mark.parametrize(
 with_supported_inventory_plugins = pytest.mark.parametrize(
     'entry_point',
     supported_inventory_plugins,
-    ids=str
+    ids=str,
 )
 
 
