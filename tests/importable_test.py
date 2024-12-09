@@ -76,7 +76,7 @@ credential_plugins = (
 inventory_plugins = (
     EntryPointParam(
         'awx_plugins.inventory',
-        'azure-rm',
+        'azure_rm',
         'awx_plugins.inventory.plugins:azure_rm',
     ),
     EntryPointParam(
@@ -133,6 +133,31 @@ inventory_plugins = (
         'awx_plugins.inventory',
         'constructed',
         'awx_plugins.inventory.plugins:constructed',
+    ),
+    EntryPointParam(
+        'awx_plugins.inventory.supported',
+        'rhv',
+        'awx_plugins.inventory.plugins:rhv_supported',
+    ),
+    EntryPointParam(
+        'awx_plugins.inventory.supported',
+        'satellite6',
+        'awx_plugins.inventory.plugins:satellite6_supported',
+    ),
+    EntryPointParam(
+        'awx_plugins.inventory.supported',
+        'controller',
+        'awx_plugins.inventory.plugins:controller_supported',
+    ),
+    EntryPointParam(
+        'awx_plugins.inventory.supported',
+        'insights',
+        'awx_plugins.inventory.plugins:insights_supported',
+    ),
+    EntryPointParam(
+        'awx_plugins.inventory.supported',
+        'openshift_virtualization',
+        'awx_plugins.inventory.plugins:openshift_virtualization_supported',
     ),
 )
 
